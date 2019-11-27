@@ -98,8 +98,10 @@ const ShopNavigator = createDrawerNavigator({
                         title="Logout"
                         color={Colors.primary}
                         onPress={() => {
+                            // clearing token and redux and will automatically
+                            // trigger to NavigationAction inside NavigationContainer
                             dispatch(authActions.logout());
-                            props.navigation.navigate('Auth');
+                            // props.navigation.navigate('Auth');
                         }}
                     />
                 </SafeAreaView>
